@@ -4,7 +4,7 @@ A Python desktop app that turns pictures into photo mosaics by replacing image r
 
 ## Setup
 
-Use **Python 3.12 or newer** with Tkinter. The current code uses Windows paths, so run it on Windows from the project root.
+Use **Python 3.12 or newer** with Tkinter. Run the commands below from the project root.
 
 ```powershell
 python -m venv .venv
@@ -52,3 +52,5 @@ The result is saved to `dest/my-mosaic.jpg`. The first run for a tile size build
 - `MosaicProcessor-1.py` and `backup/`: earlier implementations.
 
 Generated output, Python caches, virtual environments, and editor settings are ignored by Git. Ignore rules do not remove files already tracked in the repository.
+
+Compatible with Windows only.
