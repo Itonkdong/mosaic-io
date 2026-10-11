@@ -21,9 +21,9 @@ Put readable tile images directly in `tiles/` (no subfolders). The processor res
 python MosaicIO.py
 ```
 
-Select a picture, choose a tile size and border option, then click **Create Mosaic** and **Show Mosaic**. Smaller tiles preserve more detail but take longer to process. **Fill borders** expands the result to fit complete tiles; **Keep same size** preserves dimensions and leaves incomplete edge regions black.
+Select a picture, choose a tile size and border option, and enter a title. Click **Create Mosaic** to save a JPEG to `dest/<title>.jpg`, then **Show Mosaic** to preview it. The destination folder is created automatically if needed, and save failures are shown in the app. Smaller tiles preserve more detail but take longer to process. **Fill borders** expands the result to fit complete tiles; **Keep same size** preserves dimensions and leaves incomplete edge regions black.
 
-The GUI currently previews the mosaic but does not save it, despite its success message. To save a JPEG, run this example from a script in the project root:
+To create and save a mosaic from Python, run this example from a script in the project root:
 
 ```python
 from ImageProcessor import ImageProcessor

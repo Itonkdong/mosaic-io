@@ -246,13 +246,14 @@ class MosaicProcessor:
         self.last_execution_time = time.time() - start_time
 
         if write:
+            os.makedirs(dest_folder, exist_ok=True)
             if title == MosaicProcessor.__DEFAULT_MOSAIC_TITLE:
-                cv2.imwrite(
-                    f"{dest_folder}\\{title}-{tile_size[0]}x{tile_size[1]}-{"Improved" if improved else "Base"}.jpg",
-                    mosaic)
+                filename = f"{title}-{tile_size[0]}x{tile_size[1]}-{'Improved' if improved else 'Base'}.jpg"
             else:
-                cv2.imwrite(f"{dest_folder}\\{title}.jpg",
-                            mosaic)
+                filename = f"{title}.jpg"
+            output_path = os.path.join(dest_folder, filename)
+            if not cv2.imwrite(output_path, mosaic):
+                raise OSError(f"Could not save mosaic to {output_path}")
         if write_log:
             region_average_time = format(np.average(best_match_region_times), '.10f') if len(
                 best_match_region_times) != 0 else str(0)

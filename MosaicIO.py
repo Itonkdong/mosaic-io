@@ -70,11 +70,17 @@ class MosaicIO:
 
     def __do_mosaic(self, ):
         start_time = time.time()
-        self.__mosaic = self.__mosaic_processor.create_mosaic(self.__selected_img_name, self.__tile_size,
-                                                              title=self.__mosaic_title,
-                                                              fill_option=self.__fill_option,
-                                                              improved=True
-                                                              )
+        try:
+            self.__mosaic = self.__mosaic_processor.create_mosaic(
+                self.__selected_img_name, self.__tile_size,
+                title=self.__mosaic_title,
+                fill_option=self.__fill_option,
+                improved=True,
+                write=True,
+            )
+        except Exception as e:
+            self.show_info(f"Could not create or save your mosaic: {e}")
+            return
 
         end_time = time.time()
 
