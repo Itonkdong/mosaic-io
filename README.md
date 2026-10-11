@@ -51,6 +51,4 @@ The result is saved to `dest/my-mosaic.jpg`. The first run for a tile size build
 - `databases/`, `dest/`, `logs/`, `test_results/`, `experiments/`: caches, generated mosaics, and experiment output.
 - `MosaicProcessor-1.py` and `backup/`: earlier implementations.
 
-Generated output, Python caches, virtual environments, and editor settings are ignored by Git. Ignore rules do not remove files already tracked in the repository.
-
 Compatible with Windows only.
