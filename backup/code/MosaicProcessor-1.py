@@ -321,7 +321,7 @@ if __name__ == '__main__':
     mosaic_processor = MosaicProcessor(image_processor)
 
     tiles_size = (32, 32)
-    img_filepath = "./test_images/both/girl.jpg"
+    img_filepath = "../../test_images/both/girl.jpg"
 
     mosaic_image = mosaic_processor.create_mosaic(img_filepath, tiles_size,
                                                   randomization_improvement=False,

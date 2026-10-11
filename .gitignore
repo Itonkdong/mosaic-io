@@ -1,0 +1,38 @@
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Generated mosaic caches, images, and logs
+/databases/
+/dest/
+/logs/
+/test_results/
+/experiments/
+*.log
+
+# Keep tile collections, sample inputs, and historical Python source trackable.
+# Historical generated images
+/backup/*.jpg
+/backup/*.jpeg
+/backup/*.png
